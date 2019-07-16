@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+       display: block;
+       border: 1px solid red;
+       position: relative;
+       width: 100%;
+       height: 100px;
+       transform: rotate(5deg) skew(130deg) translate(100px) scale(0.5)
+    }
+    .pelota {
+        background: black;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        transition: all 1s;
+        /* transition-duration: 1s; */
+        border-radius: 50%;
+        font-size: 40px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+    }
+    .pelota.a {
+        left: 0;
+    }
+    .pelota.b {
+        right: 0;
+    }
+    .container:hover .pelota.a {
+        left: calc(50% - 100px);
+        color: white;
+        /* height: 700px; */
+        /* border-radius: 50%; */
+    }
+    .container:hover .pelota.b {
+        right: calc(50% - 100px);
+        color:white;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+     <div class="pelota a">Perro</div>
+     <div class="pelota b">¿Una de lol?</div>
+    </div>
+</body>
+</html>
