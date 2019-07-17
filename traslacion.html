@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transformaciones</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            perspective: 200px;
+        }
+        .container {
+            /* width: 200px; */
+            /* height: 200px;} */
+            border: 1px solid black;
+        }
+        .cuadrado {
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin: 20px;
+            transition: 1s;
+        }
+        .container:hover .cuadrado {
+            transform: translateZ(190px)
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cuadrado">Soy un cuadrado</div>
+    </div>
+</body>
+</html>
